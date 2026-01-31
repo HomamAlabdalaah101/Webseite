@@ -1,26 +1,11 @@
-- [x] Create components/BackgroundEffects.tsx with:
-  - Light field/beam texture
-  - Particle drift animation
-  - Grid shimmer effect
-  - Slow parallax abstract shapes
-- [x] Add CSS animations to app/globals.css if needed
-- [x] Integrate BackgroundEffects into app/layout.tsx
-- [x] Test performance and responsiveness
-=======
-# Website Enhancements Implementation
+# Hover Effects Fixes
 
-- [x] Create components/BackgroundEffects.tsx with:
-  - Light field/beam texture
-  - Particle drift animation
-  - Grid shimmer effect
-  - Slow parallax abstract shapes
-- [x] Add CSS animations to app/globals.css if needed
-- [x] Integrate BackgroundEffects into app/layout.tsx
-- [x] Test performance and responsiveness
-- [x] Enhanced hero section animations with fade-in-up effects
-- [x] Improved project card hover effects with lift, scale, and color transitions
-- [x] Animated text reveals with staggered delays
-- [x] Smooth scroll indicators (ScrollIndicator component)
-- [x] Interactive elements with micro-animations (buttons, navigation)
-- [x] Enhanced color transitions throughout
-- [x] Responsive design considerations
+## Tasks
+- [ ] Standardize hover effects across components (300ms duration, ease-in-out)
+- [ ] Add focus states for keyboard navigation to all interactive elements
+- [ ] Fix project card image scaling to prevent overflow (use transform-origin or clip-path)
+- [ ] Add performance optimizations (will-change properties)
+- [ ] Update header navigation hover effects
+- [ ] Update hero buttons hover effects
+- [ ] Update contact form button hover effects
+- [ ] Test all hover effects for consistency and accessibility

@@ -14,14 +14,14 @@ interface Project {
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={`/projects/${project.id}`}>
-      <div className="group rounded-lg overflow-hidden bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 cursor-pointer transform hover:-translate-y-2">
+      <div className="group rounded-lg overflow-hidden bg-card border border-border hover:border-primary/50 focus-within:border-primary/50 transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/10 focus-within:shadow-2xl focus-within:shadow-primary/10 cursor-pointer transform hover:-translate-y-2 focus-within:-translate-y-2 will-change-transform">
         <div className="relative overflow-hidden h-64 bg-muted">
           <img
             src={project.image || "/placeholder.svg"}
             alt={project.title}
-            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            className="w-full h-full object-contain group-hover:scale-105 focus-within:scale-105 transition-transform duration-300 ease-in-out will-change-transform"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-300 ease-in-out"></div>
         </div>
 
         <div className="p-6 space-y-4">

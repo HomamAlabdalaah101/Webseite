@@ -1,0 +1,15 @@
+# robots.txt für homam.dev
+# Verhindert Crawling von Vercel-internen Pfaden
+
+User-agent: *
+Allow: /
+
+# Blockiere Next.js interne Pfade
+Disallow: /_next/static/
+Disallow: /_next/image/
+Disallow: /api/
+
+# Blockiere Vercel-spezifische Pfade (falls vorhanden)
+Disallow: /_vercel/
+
+Sitemap: https://homam.dev/sitemap.xml

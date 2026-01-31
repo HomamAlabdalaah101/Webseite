@@ -6,7 +6,19 @@
         "build": "next build",
         "dev": "next dev",
         "lint": "eslint .",
-        "start": "next start"
+        "lint:fix": "eslint . --fix",
+        "start": "next start",
+        "type-check": "tsc --noEmit",
+        "security": "npm audit --audit-level moderate",
+        "security:fix": "npm audit fix",
+        "clean": "rm -rf .next out node_modules/.cache",
+        "analyze": "ANALYZE=true next build",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+        "prepare": "husky install",
+        "pre-commit": "npm run lint && npm run type-check",
+        "pre-push": "npm run test"
     },
     "dependencies": {
         "@hookform/resolvers": "^3.10.0",

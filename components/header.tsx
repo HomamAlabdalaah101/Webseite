@@ -55,9 +55,9 @@ export default function Header() {
         <Link
           href="/"
           onClick={handleLogoClick}
-          className="text-xl font-bold text-foreground hover:text-primary transition-colors"
+          className="text-xl font-bold text-foreground hover:text-primary focus:text-primary transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary/50 rounded"
         >
-          Portfolio
+          DevSpace
         </Link>
 
         {/* Desktop Navigation */}
@@ -67,20 +67,20 @@ export default function Header() {
               key={item.label}
               href={pathname === "/" ? item.href : `/${item.href}`}
               onClick={(e) => handleNavClick(e, item.href)}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors relative group"
+              className="text-sm text-muted-foreground hover:text-foreground focus:text-foreground transition-colors duration-300 ease-in-out relative group focus:outline-none focus:ring-2 focus:ring-primary/50 rounded px-2 py-1"
             >
               {item.label}
-              <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none"></div>
             </Link>
           ))}
           <LanguageSwitcher />
         </nav>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden flex flex-col gap-1.5 w-6 h-6" onClick={() => setIsOpen(!isOpen)}>
-          <span className={`w-full h-0.5 bg-foreground transition-all ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`w-full h-0.5 bg-foreground transition-all ${isOpen ? "opacity-0" : ""}`} />
-          <span className={`w-full h-0.5 bg-foreground transition-all ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+        <button className="md:hidden flex flex-col gap-1.5 w-6 h-6 focus:outline-none focus:ring-2 focus:ring-primary/50 rounded" onClick={() => setIsOpen(!isOpen)}>
+          <span className={`w-full h-0.5 bg-foreground transition-all duration-300 ease-in-out ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`w-full h-0.5 bg-foreground transition-all duration-300 ease-in-out ${isOpen ? "opacity-0" : ""}`} />
+          <span className={`w-full h-0.5 bg-foreground transition-all duration-300 ease-in-out ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
         </button>
 
         {/* Mobile Navigation */}
@@ -92,7 +92,7 @@ export default function Header() {
                   key={item.label}
                   href={pathname === "/" ? item.href : `/${item.href}`}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-muted-foreground hover:text-foreground focus:text-foreground transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary/50 rounded px-2 py-1"
                 >
                   {item.label}
                 </Link>

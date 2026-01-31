@@ -9,8 +9,16 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Homam | Creative Developer & Designer",
-  description: "Digital portfolio showcasing game development, web design, and animation projects by Homam",
+  metadataBase: new URL('https://homam.dev'),
+
+  // ===== BASIC METADATA =====
+  title: {
+    default: 'Homam | Creative Developer',
+    template: '%s | Homam'
+  },
+  description: 'Portfolio von Homam - Full-Stack Developer & UI/UX Designer',
+
+  // ===== EIGENE ICONS (entfernt Vercel-Standard) =====
   icons: {
     icon: [
       {
@@ -28,6 +36,43 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
+
+  // ===== OPEN GRAPH FÜR SOCIAL MEDIA =====
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    url: 'https://homam.dev',
+    siteName: 'Homam Dev',
+    title: 'Homam | Creative Developer',
+    description: 'Portfolio von Homam - Full-Stack Developer & UI/UX Designer',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Homam Dev Portfolio',
+      },
+    ],
+  },
+
+  // ===== TWITTER CARD =====
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Homam | Creative Developer',
+    description: 'Portfolio von Homam - Full-Stack Developer & UI/UX Designer',
+    images: ['/og-image.png'],
+  },
+
+  // ===== ROBOTS =====
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  // ===== VERHINDERT VERCEL-ANALYTICS =====
+  other: {
+    'google-site-verification': 'your-verification-code',
+  }
 }
 
 export default function RootLayout({
