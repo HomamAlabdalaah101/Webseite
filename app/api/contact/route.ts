@@ -27,7 +27,7 @@ export async function POST(request: Request) {
         const resend = new Resend(apiKey)
 
         const result = await resend.emails.send({
-          from: "Kontakt <noreply@homamdev.de>",
+          from: "Kontakt <onboarding@resend.dev>",
           to: "homsef1212@gmail.com",
           subject: `Neue Kontaktnachricht von ${name}: ${subject}`,
           html: `
