@@ -12,4 +12,3 @@ Disallow: /api/
 # Blockiere Vercel-spezifische Pfade (falls vorhanden)
 Disallow: /_vercel/
 
-Sitemap: https://homam.dev/sitemap.xml
