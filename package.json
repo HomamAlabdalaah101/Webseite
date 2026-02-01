@@ -21,7 +21,7 @@
     "deploy": "./deploy.sh",
     "deploy:vercel": "vercel --prod",
     "deploy:check": "npm run build && npm run lint && npm run type-check",
-    "postbuild": "next-sitemap",
+
     "export": "next export",
     "build:analyze": "ANALYZE=true npm run build",
     "build:profile": "next build --profile",
