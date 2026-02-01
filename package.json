@@ -36,7 +36,7 @@
     "update": "npm update && npm audit fix",
     "docker:build": "docker build -t homam-portfolio .",
     "docker:run": "docker run -p 3000:3000 homam-portfolio",
-    "prepare": "husky"
+    "prepare": "husky || true"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
