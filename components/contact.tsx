@@ -26,7 +26,7 @@ export default function Contact() {
 
     try {
       // Direkt an Formspree senden (zuverlässiger als API Route)
-      const response = await fetch("https://formspree.io/f/mgoaevgq", {
+      const response = await fetch("https://formspree.io/f/mrelwabr", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
