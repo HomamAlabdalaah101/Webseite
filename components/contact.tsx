@@ -41,17 +41,21 @@ export default function Contact() {
         },
       })
 
+      const responseData = await response.json().catch(() => ({}))
+      console.log("Formspree Response:", response.status, responseData)
+
       if (response.ok) {
         setStatus("success")
         setFormData({ name: "", email: "", subject: "", message: "" })
       } else {
-        const errorData = await response.json().catch(() => ({}))
         setStatus("error")
-        console.error("Formspree Error:", errorData)
+        console.error("Formspree Error:", response.status, responseData)
+        alert(`Formspree Fehler: ${response.status} - ${JSON.stringify(responseData)}`)
       }
     } catch (error) {
       setStatus("error")
       console.error("Network error:", error)
+      alert(`Netzwerk Fehler: ${error}`)
     }
   }
 
