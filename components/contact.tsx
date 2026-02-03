@@ -25,22 +25,29 @@ export default function Contact() {
     setStatus("loading")
 
     try {
-      const response = await fetch("/api/contact", {
+      // Direkt an Formspree senden (zuverlässiger als API Route)
+      const response = await fetch("https://formspree.io/f/mgoaevgq", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Accept": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _subject: `Neue Kontaktnachricht: ${formData.subject}`,
+        }),
       })
-
-      const data = await response.json()
 
       if (response.ok) {
         setStatus("success")
         setFormData({ name: "", email: "", subject: "", message: "" })
       } else {
+        const data = await response.json().catch(() => ({}))
         setStatus("error")
-        console.error("Error:", data.error)
+        console.error("Formspree Error:", data)
       }
     } catch (error) {
       setStatus("error")
@@ -87,7 +94,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-foreground mb-2">Betreff</label>
+            <label className="block text-sm font-medium text-foreground mb-2">{t.contact.subject}</label>
             <input
               type="text"
               name="subject"
@@ -95,7 +102,7 @@ export default function Contact() {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-              placeholder="Betreff der Nachricht"
+              placeholder={t.contact.subjectPlaceholder}
             />
           </div>
 
