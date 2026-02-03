@@ -25,29 +25,29 @@ export default function Contact() {
     setStatus("loading")
 
     try {
-      // Direkt an Formspree senden (zuverlässiger als API Route)
+      // FormData für Formspree (kompatibler als JSON)
+      const data = new FormData()
+      data.append("name", formData.name)
+      data.append("email", formData.email)
+      data.append("subject", formData.subject)
+      data.append("message", formData.message)
+      data.append("_subject", `Neue Kontaktnachricht: ${formData.subject}`)
+
       const response = await fetch("https://formspree.io/f/mrelwabr", {
         method: "POST",
+        body: data,
         headers: {
-          "Content-Type": "application/json",
           "Accept": "application/json",
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          _subject: `Neue Kontaktnachricht: ${formData.subject}`,
-        }),
       })
 
       if (response.ok) {
         setStatus("success")
         setFormData({ name: "", email: "", subject: "", message: "" })
       } else {
-        const data = await response.json().catch(() => ({}))
+        const errorData = await response.json().catch(() => ({}))
         setStatus("error")
-        console.error("Formspree Error:", data)
+        console.error("Formspree Error:", errorData)
       }
     } catch (error) {
       setStatus("error")
