@@ -75,8 +75,8 @@ export const defaultSEOConfig: SEOConfig = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@homamalkhateeb', // Replace with actual Twitter handle
-    creator: '@homamalkhateeb'
+    site: '@homamdev', // Replace with actual Twitter handle
+    creator: '@homamdev'
   },
   openGraph: {
     title: 'Homam - Full Stack Developer & Designer',
@@ -173,9 +173,9 @@ export function generateStructuredData(config: SEOConfig) {
     image: config.image.url,
     sameAs: [
       // Add social media profiles here
-      // 'https://twitter.com/homamalkhateeb',
-      // 'https://github.com/homamalkhateeb',
-      // 'https://linkedin.com/in/homamalkhateeb'
+      // 'https://twitter.com/homamdev',
+      // 'https://github.com/homamdev',
+      // 'https://linkedin.com/in/homamdev'
     ],
     jobTitle: 'Full Stack Developer & Designer',
     knowsAbout: config.keywords
