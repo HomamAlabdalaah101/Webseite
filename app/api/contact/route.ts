@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 
-const FORMSPREE_URL = "https://formspree.io/f/mgoaevgq"
+const FORMSPREE_URL = "https://formspree.io/f/mrelwabr"
 
 export async function POST(request: Request) {
   try {
@@ -26,7 +26,8 @@ export async function POST(request: Request) {
         email,
         subject,
         message,
-        _subject: `Neue Kontaktnachricht: ${subject}`
+        _subject: `Neue Kontaktnachricht: ${subject}`,
+        _replyto: email
       })
     })
 
