@@ -15,21 +15,20 @@ export async function POST(request: Request) {
     }
 
     // An Formspree senden
-    const formData = new URLSearchParams()
-    formData.append('name', name)
-    formData.append('email', email)
-    formData.append('subject', subject)
-    formData.append('message', message)
-    formData.append('_subject', `Neue Kontaktnachricht: ${subject}`)
-    formData.append('_replyto', email)
-
     const response = await fetch(FORMSPREE_URL, {
       method: "POST",
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "application/json",
         "Accept": "application/json"
       },
-      body: formData.toString()
+      body: JSON.stringify({
+        name,
+        email,
+        subject,
+        message,
+        _subject: `Neue Kontaktnachricht: ${subject}`,
+        _replyto: email
+      })
     })
 
     if (response.ok) {
