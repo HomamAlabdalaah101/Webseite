@@ -57,7 +57,7 @@ export default function Header() {
           onClick={handleLogoClick}
           className="text-xl font-bold text-foreground hover:text-primary focus:text-primary transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary/50 rounded"
         >
-          DevSpace
+          HomamDev
         </Link>
 
         {/* Desktop Navigation */}
