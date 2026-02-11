@@ -13,9 +13,9 @@ interface Project {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link href={`/projects/${project.id}`}>
-      <div className="group rounded-lg overflow-hidden bg-card border border-border hover:border-primary/50 focus-within:border-primary/50 transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/10 focus-within:shadow-2xl focus-within:shadow-primary/10 cursor-pointer transform hover:-translate-y-2 focus-within:-translate-y-2 will-change-transform">
-        <div className="relative overflow-hidden h-64 bg-muted">
+    <Link href={`/projects/${project.id}`} className="h-full">
+      <div className="group h-full flex flex-col rounded-lg overflow-hidden bg-card border border-border hover:border-primary/50 focus-within:border-primary/50 transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/10 focus-within:shadow-2xl focus-within:shadow-primary/10 cursor-pointer transform hover:-translate-y-2 focus-within:-translate-y-2 will-change-transform">
+        <div className="relative overflow-hidden h-64 bg-muted shrink-0">
           <img
             src={project.image || "/placeholder.svg"}
             alt={project.title}
@@ -24,7 +24,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-300 ease-in-out"></div>
         </div>
 
-        <div className="p-6 space-y-4">
+        <div className="p-6 space-y-4 flex flex-col flex-1">
           <div>
             <p className="text-xs text-primary font-medium mb-2 group-hover:scale-105 transition-transform duration-200">{project.category}</p>
             <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 group-hover:scale-105 transition-transform">
@@ -32,9 +32,9 @@ export default function ProjectCard({ project }: { project: Project }) {
             </h3>
           </div>
 
-          <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">{project.description}</p>
+          <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300 flex-1">{project.description}</p>
 
-          <div className="flex flex-wrap gap-2 pt-2">
+          <div className="flex flex-wrap gap-2 pt-2 mt-auto">
             {project.tags.map((tag, index) => (
               <span
                 key={tag}
