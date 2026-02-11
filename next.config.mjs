@@ -11,6 +11,9 @@ const nextConfig = {
     // Sichere React Strict Mode
     reactStrictMode: true,
 
+    // Trailing Slash konsistent halten (verhindert Redirect-Probleme bei Google-Indexierung)
+    trailingSlash: false,
+
     typescript: {
         ignoreBuildErrors: true,
     },
