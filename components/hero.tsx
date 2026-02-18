@@ -6,13 +6,13 @@ export default function Hero() {
   const { t } = useLanguage()
 
   return (
-    <section className="pt-32 pb-20 px-6 bg-background">
+    <section className="pt-28 md:pt-32 pb-16 md:pb-20 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="space-y-8 max-w-2xl">
           <div>
             <p className="text-sm text-muted-foreground mb-4">{t.hero.greeting}</p>
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight text-balance">Homam</h1>
-            <p className="text-2xl md:text-3xl text-muted-foreground mt-4">{t.hero.role}</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">Homam</h1>
+            <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mt-4">{t.hero.role}</p>
           </div>
 
           <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">

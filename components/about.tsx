@@ -6,13 +6,13 @@ export default function About() {
   const { t } = useLanguage()
 
   return (
-    <section id="about" className="py-20 px-6 bg-background">
+    <section id="about" className="py-16 md:py-20 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
             <div>
               <p className="text-sm text-primary font-medium mb-4">{t.about.title}</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">{t.about.greeting}</h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">{t.about.greeting}</h2>
               <p className="text-xl text-muted-foreground mt-4">{t.about.tagline}</p>
             </div>
 
@@ -60,7 +60,7 @@ export default function About() {
               {t.about.techDescription}
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-card border border-border rounded-lg p-6">
                 <h4 className="font-bold text-foreground mb-3">{t.about.frontend}</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">

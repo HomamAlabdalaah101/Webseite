@@ -50,11 +50,11 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-6 bg-card/30">
+    <section id="contact" className="py-16 md:py-20 px-6 bg-card/30">
       <div className="max-w-2xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <p className="text-sm text-primary font-medium mb-4">{t.contact.title}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{t.contact.heading}</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">{t.contact.heading}</h2>
           <p className="text-lg text-muted-foreground">
             {t.contact.description}
           </p>

@@ -126,7 +126,7 @@ export default function ProjectPage() {
           <div className="grid grid-cols-1 gap-12">
             <div>
               <p className="text-sm text-primary font-medium mb-3">{translatedContent.category}</p>
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 text-balance">{projectBase.title}</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">{projectBase.title}</h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">{translatedContent.longDescription}</p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-border">
@@ -173,7 +173,7 @@ export default function ProjectPage() {
       {/* Features & Technologies */}
       <section className="py-20 px-6 bg-card/30">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
             {/* Features */}
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">{t.projects.keyFeatures}</h3>

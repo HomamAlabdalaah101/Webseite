@@ -18,7 +18,7 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Kontaktieren Sie uns
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -27,9 +27,9 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
           {/* Contact Information */}
-          <div className="lg:col-span-1 space-y-8">
+          <div className="md:col-span-2 lg:col-span-1 space-y-8">
             <div>
               <h2 className="text-2xl font-semibold text-foreground mb-6">
                 Kontaktinformationen
@@ -129,7 +129,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <div className="md:col-span-2 lg:col-span-2">
             <ContactForm />
           </div>
         </div>
