@@ -15,11 +15,11 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={`/projects/${project.id}`} className="h-full">
       <div className="group h-full flex flex-col rounded-lg overflow-hidden bg-card border border-border hover:border-primary/50 focus-within:border-primary/50 transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/10 focus-within:shadow-2xl focus-within:shadow-primary/10 cursor-pointer transform hover:-translate-y-2 focus-within:-translate-y-2 will-change-transform">
-        <div className="relative overflow-hidden h-64 bg-muted shrink-0">
+        <div className="relative overflow-hidden aspect-video bg-muted shrink-0">
           <img
             src={project.image || "/placeholder.svg"}
             alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-105 focus-within:scale-105 transition-transform duration-300 ease-in-out will-change-transform"
+            className="w-full h-full object-contain group-hover:scale-105 focus-within:scale-105 transition-transform duration-300 ease-in-out will-change-transform"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-300 ease-in-out"></div>
         </div>
