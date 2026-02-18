@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <img
             src={project.image || "/placeholder.svg"}
             alt={project.title}
-            className="w-full h-full object-contain group-hover:scale-105 focus-within:scale-105 transition-transform duration-300 ease-in-out will-change-transform"
+            className="w-full h-full object-cover group-hover:scale-105 focus-within:scale-105 transition-transform duration-300 ease-in-out will-change-transform"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-300 ease-in-out"></div>
         </div>
