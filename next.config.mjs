@@ -89,15 +89,16 @@ const nextConfig = {
         }]
     },
 
-    // ===== REDIRECTS (Optional) =====
+    // ===== REDIRECTS =====
     async redirects() {
         return [
-            // Alte URLs umleiten, falls nötig
-            // {
-            //   source: '/old-path',
-            //   destination: '/new-path',
-            //   permanent: true,
-            // },
+            // www → non-www (kanonische URL festlegen)
+            {
+                source: '/:path*',
+                has: [{ type: 'host', value: 'www.homamdev.de' }],
+                destination: 'https://homamdev.de/:path*',
+                permanent: true,
+            },
         ]
     },
 }
