@@ -91,15 +91,7 @@ const nextConfig = {
 
     // ===== REDIRECTS =====
     async redirects() {
-        return [
-            // www → non-www (kanonische URL festlegen)
-            {
-                source: '/:path*',
-                has: [{ type: 'host', value: 'www.homamdev.de' }],
-                destination: 'https://homamdev.de/:path*',
-                permanent: true,
-            },
-        ]
+        return []
     },
 }
 
